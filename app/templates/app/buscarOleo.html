@@ -1,0 +1,27 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block suscripcion %}
+<h2>Busca tu pieza de arte<h2>
+    <form action="/buscar2" method="get">
+        {% csrf_token %}
+        <p>Buscar tu oleo: <input type="text" name="buscar" id="buscar"></p>
+        <input type="submit" value="Enviar">
+    </form>
+    
+{% endblock suscripcion %}
+
+
+{% block vendedoresprincipales %}
+    
+{% endblock vendedoresprincipales %}
+
+
+{% block contacto %}
+    
+{% endblock contacto %}
+
+
+{% block ventajas %}
+    
+{% endblock ventajas %}

@@ -1,0 +1,54 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+
+{% block suscripcion %}
+<h1>Catalogo de oleos</h1>
+
+
+<div class="container text-center">
+    <h1>Oleos</h1>
+</div>
+
+<br>
+<div class="container text-center">
+    <div class="row">
+            {% for oleo in oleo_list %}
+
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="{{oleo.imagenOleo.url}}" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">{{oleo.nombre}}</h5>
+                  <p class="card-text">{{oleo.descripcion}}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">{{oleo.dimensiones}}</li>
+                  <li class="list-group-item">{{oleo.precio}}</li>
+                  
+                </ul>
+                <div class="card-body">
+                  <a href="{% url 'editar_oleo' oleo.id %}"><i class="fa-solid fa-pencil" style="color: #000000;"></i></a>
+                  <a href="{% url 'borrar_oleo' oleo.id %}"><i class="fa-solid fa-trash-can" style="color: #ff0000;"></i></i></a>
+                </div>
+              </div>
+            {% endfor %}
+    </div>
+</div>
+
+    
+{% endblock suscripcion %}
+
+
+{% block vendedoresprincipales %}
+    
+{% endblock vendedoresprincipales %}
+
+
+{% block contacto %}
+    
+{% endblock contacto %}
+
+
+{% block ventajas %}
+    
+{% endblock ventajas %}

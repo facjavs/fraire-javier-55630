@@ -1,0 +1,30 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block suscripcion %}
+<h2>Registro</h2>
+<form action="" method="post">
+    {% csrf_token %}
+    <table>
+        {{ form.as_table }}
+    </table>
+    <input type="submit" value="Crear usuario">
+</form>
+{% endblock suscripcion %}
+
+
+
+
+{% block vendedoresprincipales %}
+    
+{% endblock vendedoresprincipales %}
+
+
+{% block contacto %}
+    
+{% endblock contacto %}
+
+
+{% block ventajas %}
+    
+{% endblock ventajas %}

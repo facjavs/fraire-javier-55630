@@ -1,0 +1,31 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block suscripcion %}
+<h2>Registra tu acuarela<h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table> 
+        <input type="submit" value="Enviar">
+    </form>
+    
+{% endblock suscripcion %}
+
+
+{% block vendedoresprincipales %}
+    
+{% endblock vendedoresprincipales %}
+
+
+{% block contacto %}
+    
+{% endblock contacto %}
+
+
+{% block ventajas %}
+    
+{% endblock ventajas %}
+
+

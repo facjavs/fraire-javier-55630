@@ -1,0 +1,32 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block suscripcion %}
+<h2>Confirmar eleccion<h2>
+
+    <div class="container text-center">
+
+        <form method="post">{% csrf_token %}
+            <h4>Estás seguro(a) que deseas borrar la acuarela seleccionada?</h4>
+            <p>
+                <button type="submit" class="btn btn-danger">Eliminar</button>
+            </p>
+        </form>
+      
+        </div>
+{% endblock suscripcion %}
+
+
+{% block vendedoresprincipales %}
+    
+{% endblock vendedoresprincipales %}
+
+
+{% block contacto %}
+    
+{% endblock contacto %}
+
+
+{% block ventajas %}
+    
+{% endblock ventajas %}
